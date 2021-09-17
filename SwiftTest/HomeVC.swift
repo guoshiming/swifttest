@@ -13,7 +13,7 @@ class HomeVC: UIViewController{
         super.viewDidLoad()
         
         //设置设置导航栏标题
-        self.title="主页"
+        self.navigationItem.title="main page"
         //设置导航栏背景色
         self.navigationController?.navigationBar.barTintColor = UIColor.white
 

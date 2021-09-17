@@ -10,6 +10,8 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    // 创建TabBar数组
+    var tabs = ["首页", "个人中心"]
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -19,9 +21,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let window  = UIWindow(windowScene: windowScene)
             let homeVC = HomeVC()
-            let nav = UINavigationController(rootViewController: homeVC)
+            let homeNav = UINavigationController.init(rootViewController: homeVC)
+            homeNav.tabBarItem = UITabBarItem.init(title: "首页", image: nil, selectedImage: nil)
             
-            window.rootViewController = nav
+            let myVC = MyVC()
+            let myNav = UINavigationController.init(rootViewController: myVC)
+            myNav.tabBarItem = UITabBarItem.init(title: "个人中心", image: nil, selectedImage: nil)
+            
+            let tabBar = UITabBarController()
+            tabBar.viewControllers = [homeNav,myNav];
+            
+            window.rootViewController = tabBar
             window.backgroundColor = UIColor.white
             
             self.window = window;
