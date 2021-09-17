@@ -7,27 +7,29 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.white
-        
-        
+        //设置设置导航栏标题
+        self.title="主页"
+        //设置导航栏背景色
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+
         // button  点击无参数
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
         button.backgroundColor = UIColor.red
-        button.addTarget(self, action: #selector(ViewController.buttonTap), for:.touchUpInside)
+        button.addTarget(self, action: #selector(HomeVC.buttonTap), for:.touchUpInside)
         //button1：点击有参数
         let button1 = UIButton(frame: CGRect(x: 100, y: 300, width: 100, height: 80))
+        button1.setTitle("按钮点击", for: UIControl.State.normal)
+        button1.setTitleColor(UIColor.black, for: UIControl.State.normal)
         button1.backgroundColor = UIColor.green
         button1.addTarget(self, action: #selector(buttonTap1(button:)), for:.touchUpInside)
         
         self.view.addSubview(button)
         self.view.addSubview(button1)
-        
-        self.showBottomAlert();
     }
     
     
@@ -35,11 +37,28 @@ class ViewController: UIViewController {
     @objc func buttonTap() {
         print("无参点击buttonTap")
         
+        // 例子最为简单明了
+        let str: String? = "12312"
+        let greeting = "World!"
+        if let name = str {
+              let message = greeting + name
+              print(message)
+        }
         self.showBottomAlert();
     }
     
     @objc func buttonTap1(button:UIButton) {
+        
+        var one = 1
+        
+        for index in 0...4{
+            one += 1
+            print("索引值=\(index)",",测试值=\(one)")
+        }
         print("有参数点击buttonTap参数")
+        let vc = HomeVC()
+        
+        self.navigationController?.pushViewController(vc, animated: true);
     }
     
     override func didReceiveMemoryWarning() {

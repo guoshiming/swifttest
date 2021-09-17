@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750D441926F214BB002B91FA /* MyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D441826F214BB002B91FA /* MyVC.swift */; };
 		7516156626DE5E0100357F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516156526DE5E0100357F43 /* AppDelegate.swift */; };
 		7516156826DE5E0100357F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516156726DE5E0100357F43 /* SceneDelegate.swift */; };
-		7516156A26DE5E0100357F43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516156926DE5E0100357F43 /* ViewController.swift */; };
+		7516156A26DE5E0100357F43 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516156926DE5E0100357F43 /* HomeVC.swift */; };
 		7516156D26DE5E0100357F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7516156B26DE5E0100357F43 /* Main.storyboard */; };
 		7516156F26DE5E0400357F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7516156E26DE5E0400357F43 /* Assets.xcassets */; };
 		7516157226DE5E0400357F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7516157026DE5E0400357F43 /* LaunchScreen.storyboard */; };
@@ -35,10 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		750D441826F214BB002B91FA /* MyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVC.swift; sourceTree = "<group>"; };
 		7516156226DE5E0100357F43 /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7516156526DE5E0100357F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7516156726DE5E0100357F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7516156926DE5E0100357F43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7516156926DE5E0100357F43 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7516156C26DE5E0100357F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7516156E26DE5E0400357F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7516157126DE5E0400357F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +103,8 @@
 			children = (
 				7516156526DE5E0100357F43 /* AppDelegate.swift */,
 				7516156726DE5E0100357F43 /* SceneDelegate.swift */,
-				7516156926DE5E0100357F43 /* ViewController.swift */,
+				7516156926DE5E0100357F43 /* HomeVC.swift */,
+				750D441826F214BB002B91FA /* MyVC.swift */,
 				7516156B26DE5E0100357F43 /* Main.storyboard */,
 				7516156E26DE5E0400357F43 /* Assets.xcassets */,
 				7516157026DE5E0400357F43 /* LaunchScreen.storyboard */,
@@ -258,7 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7516156A26DE5E0100357F43 /* ViewController.swift in Sources */,
+				7516156A26DE5E0100357F43 /* HomeVC.swift in Sources */,
+				750D441926F214BB002B91FA /* MyVC.swift in Sources */,
 				7516156626DE5E0100357F43 /* AppDelegate.swift in Sources */,
 				7516156826DE5E0100357F43 /* SceneDelegate.swift in Sources */,
 			);
@@ -444,7 +448,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xinye.SwiftTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ppdai.a;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development *";
 				SWIFT_VERSION = 5.0;
@@ -465,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xinye.SwiftTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ppdai.a;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development *";
 				SWIFT_VERSION = 5.0;
