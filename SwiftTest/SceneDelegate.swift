@@ -12,6 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     // 创建TabBar数组
     var tabs = ["首页", "个人中心"]
+    var images = ["tabBar_home", "tabBar_account"]
+    var selectedImages = ["tabBar_home_selected", "tabBar_account_selected"]
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -22,11 +24,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window  = UIWindow(windowScene: windowScene)
             let homeVC = HomeVC()
             let homeNav = UINavigationController.init(rootViewController: homeVC)
-            homeNav.tabBarItem = UITabBarItem.init(title: "首页", image: nil, selectedImage: nil)
+            // 改变图片 保证图片不失真
+            let homeImage0 = UIImage(named:images[0])?.withRenderingMode(.alwaysOriginal)
+            let homeSelectImage0 = UIImage(named:selectedImages[0])?.withRenderingMode(.alwaysOriginal)
+            homeNav.tabBarItem = UITabBarItem.init(title: tabs[0], image: homeImage0, selectedImage: homeSelectImage0)
+            
             
             let myVC = MyVC()
             let myNav = UINavigationController.init(rootViewController: myVC)
-            myNav.tabBarItem = UITabBarItem.init(title: "个人中心", image: nil, selectedImage: nil)
+            // 改变图片 保证图片不失真
+            let homeImage1 = UIImage(named:images[1])?.withRenderingMode(.alwaysOriginal)
+            let homeSelectImage1 = UIImage(named:selectedImages[1])?.withRenderingMode(.alwaysOriginal)
+            myNav.tabBarItem = UITabBarItem.init(title: tabs[1], image: homeImage1, selectedImage: homeSelectImage1)
+            
             
             let tabBar = UITabBarController()
             tabBar.viewControllers = [homeNav,myNav];
@@ -36,9 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             self.window = window;
             window.makeKeyAndVisible()
-            
         }
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
